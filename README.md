@@ -1,19 +1,6 @@
-# File Templates
-Allows uploaded files to be inlined into MediaWiki pages
+# Bunburrows Extension
+A MediaWiki extensions for the Pâquerette Down the Bunburrows wiki on wiki.gg
 
 ## Installation
-- Extract and place FileTemplates into your MediaWiki extensions directory
-- Add `wfLoadExtension( 'FileTemplates' );` to LocalSettings.php
-
-## Configuration
-Configure allowed MIME types:
-
-`LocalSettings.php`
-```php
-$wgFileTemplatesAllowedMimeTypes = [
-        'image/svg+xml',
-        '...',
-        '...',
-];
-```
-**Files matching this list can be used by anyone.** Make sure files uploaded to your wiki are fully sanitised to prevent XSS and other vulnerabilities
+- Extract and place BunburrowsExtension into your MediaWiki extensions directory
+- Add `wfLoadExtension( 'BunburrowsExtension' );` to LocalSettings.php
