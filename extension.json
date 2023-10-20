@@ -1,0 +1,42 @@
+{
+    "author": "Solly Watkins",
+    "description": "Bunburrows Extension",
+    "license-name": "CC0-1.0",
+    "manifest_version": 2,
+    "name": "BunburrowsExtension",
+    "type": "other",
+    "url": "https://github.com/SollyW/BunburrowsExtension",
+    "version": "1.0.0",
+
+    "AutoloadClasses": {
+        "BunburrowsExtension\\ClassCategories": "src/ClassCategories.php",
+        "BunburrowsExtension\\Toggle": "src/Toggle.php",
+        "BunburrowsExtension\\Util": "src/Util.php"
+    },
+
+    "ExtensionMessagesFiles": {
+        "BunburrowsExtension\\Magic": "Magic.i18n.php"
+    },
+
+    "HookHandlers": {
+        "classCategories": {
+            "class": "BunburrowsExtension\\ClassCategories",
+            "services": [ "RevisionLookup" ]
+        },
+
+        "toggle": {
+            "class": "BunburrowsExtension\\Toggle"
+        }
+    },
+
+    "Hooks": {
+        "BeforePageDisplay": "classCategories",
+        "ParserFirstCallInit": "toggle"
+    },
+
+    "MessagesDirs": {
+        "BunburrowsExtension": [
+            "i18n"
+        ]
+    }
+}
